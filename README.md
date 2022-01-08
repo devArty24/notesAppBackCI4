@@ -108,5 +108,5 @@ Since you have made your DB and have the variables of the db configured, in the 
 
 Finally run the seeder with
 ```
-> php spark db: seed
+> php spark db:seed Notes
 ```

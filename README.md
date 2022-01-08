@@ -76,6 +76,11 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 
 Once the project is downloaded, rename the `env` file to `.env`
 
+Now position yourself in the root folder of the project in your terminal to be able to download and install the packages configured in the `composer.json` file execute the command
+```
+> composer install
+```
+
 Open the .env file and change the value of `CI ENVIRONMENT` to `development`, when you deploy your project change this value to `production`
 ```
 CI_ENVIRONMENT = development

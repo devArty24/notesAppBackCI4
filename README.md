@@ -61,3 +61,47 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 - [mbstring](http://php.net/manual/en/mbstring.installation.php)
 - [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
 - xml (enabled by default - don't turn it off)
+
+## Key Features
+
+1. CodeIgniter 4.1.6
+2. PHP v7.3.21
+3. [Faker](https://fakerphp.github.io/) generate data test
+4. Seeders
+5. Fabricators Models
+6. RESTfull API
+7. Library [codeigniter4-cors](https://github.com/agungsugiarto/codeigniter4-cors)
+
+## Installation
+
+Once the project is downloaded, rename the `env` file to `.env`
+
+Open the .env file and change the value of `CI ENVIRONMENT` to `development`, when you deploy your project change this value to `production`
+```
+CI_ENVIRONMENT = development
+```
+
+Write the global url that you will occupy for the whole project this in the file `.env` in:
+```
+app.baseURL = 'project_url/'
+```
+
+Now configure the accesses for your `DB`, this is important because the migration and the seeder will be executed on it. It is configured in the `.env` file or in `app/Config/Database.php`
+```
+/* Modify the value of the variables according to your needs */
+'hostname' => 'localhost',
+'username' => 'root',
+'password' => '',
+'database' => 'nameYourDataBase'
+
+```
+
+Since you have made your DB and have the variables of the db configured, in the terminal position yourself on the root of the project and execute the following command to execute the migration
+```
+> php spark migrate
+```
+
+Finally run the seeder with
+```
+> php spark db: seed
+```
